@@ -1,0 +1,88 @@
+/* 1. Base */
+:root {
+  --main-text-color: #937b92;
+  --accent-text-color: #502050;
+  --secondary-text-color: #ffffff;
+  --secondary-accent-text-color: #ee68a4;
+  --secondary-bg-color: #f7f2f7;
+  --accent-bg-color: #502050;
+}
+
+body {
+  background: url('../images/bg-pattern-top-mobile.svg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: var(--main-text-color);
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.1;
+  min-height: 100vh;
+  min-width: 390px;
+  overflow-x: hidden;
+  text-align: center;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Shared */
+
+
+/* 3. Specific */
+
+.social-proof__title {
+  color: var(--accent-text-color);
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 90px 0 25px 0;
+  width: 70%;
+}
+
+.social-proof__subtitle {
+  line-height: 1.5;
+  margin: 0 auto 40px auto;
+  width: 84%;
+}
+
+.accomplishment {
+  background-color: var(--secondary-bg-color);
+  border-radius: 10px;
+  color: var(--accent-text-color);
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  margin: 0 auto 20px auto;
+  padding: 20px;
+  width: 88%;
+}
+
+.accomplishment__icons {
+  margin-bottom: 15px;
+}
+
+.accomplishment__star-icon {
+  padding: 0 3px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonials-card{
+  background-color: var(--accent-bg-color);
+  color: var(--secondary-text-color);
+  margin-bottom: 15px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/* 4. Responsiveness */
