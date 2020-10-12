@@ -30,6 +30,10 @@ body {
 
 
 /* 3. Specific */
+.social-proof {
+  margin: 0 auto;
+  width: 90%;
+}
 
 .social-proof__title {
   color: var(--accent-text-color);
@@ -37,13 +41,12 @@ body {
   font-weight: 700;
   margin: 0 auto;
   padding: 90px 0 25px 0;
-  width: 70%;
 }
 
 .social-proof__subtitle {
   line-height: 1.5;
   margin: 0 auto 40px auto;
-  width: 84%;
+  padding: 0 15px;
 }
 
 .accomplishment {
@@ -55,7 +58,10 @@ body {
   font-weight: 700;
   margin: 0 auto 20px auto;
   padding: 20px;
-  width: 88%;
+}
+
+.accomplishment__three {
+  margin-bottom: 60px;
 }
 
 .accomplishment__icons {
@@ -69,17 +75,57 @@ body {
 .testimonials {
   display: flex;
   flex-direction: column;
+  text-align: start;
 }
 
 .testimonials-card{
   background-color: var(--accent-bg-color);
+  border-radius: 5px;
   color: var(--secondary-text-color);
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  margin:0 auto 15px auto;
+  padding: 30px;
+}
+
+.testimonials-card__three {
+  margin-bottom: 80px;
+} 
+
+.testimonials-card__reviewer-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-top: 15px;
+}
+
+.testimonials-card__image {
+  border-radius: 50%;
+  height: 45px;
+  margin-right: 20px;
+  width: 45px;
+}
+
+.testimonials-card__name {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.testimonials-card__type {
+  color: var(--secondary-accent-text-color)
+}
+
+.testimonials-card__review {
+  line-height: 1.5;
+  padding-bottom: 10px;
 }
 
 .attribution {
+  justify-self: flex-end;
   font-size: 11px;
   text-align: center;
+  padding-bottom: 10px;
 }
 .attribution a {
   color: #3e52a3;
