@@ -19,8 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1.1;
-  min-height: 100vh;
-  min-width: 390px;
+  min-width: 300px;
   overflow-x: hidden;
   text-align: center;
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
@@ -31,8 +30,20 @@ body {
 
 /* 3. Specific */
 .social-proof {
+  display: grid;
+  grid-template-areas: "text"
+                       "accomplishments"
+                       "testimonials"
+                       "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  min-height: 100vh;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
+}
+
+.social-proof__text {
+  grid-area: text;
 }
 
 .social-proof__title {
@@ -56,12 +67,9 @@ body {
   display: flex;
   flex-direction: column;
   font-weight: 700;
+  grid-area: accomplishments;
   margin: 0 auto 20px auto;
   padding: 20px;
-}
-
-.accomplishment__three {
-  margin-bottom: 60px;
 }
 
 .accomplishment__icons {
@@ -75,7 +83,8 @@ body {
 .testimonials {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  grid-area: testimonials;
+  text-align: left;
 }
 
 .testimonials-card{
@@ -88,14 +97,10 @@ body {
   padding: 30px;
 }
 
-.testimonials-card__three {
-  margin-bottom: 80px;
-} 
-
 .testimonials-card__reviewer-info {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   margin-bottom: 30px;
   padding-top: 15px;
 }
@@ -122,13 +127,81 @@ body {
 }
 
 .attribution {
-  justify-self: flex-end;
+  align-self: flex-end;
+  background: var(--secondary-bg-color);
   font-size: 11px;
+  grid-area: footer;
+  padding: 10px 0;
   text-align: center;
-  padding-bottom: 10px;
 }
 .attribution a {
   color: #3e52a3;
 }
 
 /* 4. Responsiveness */
+@media (min-width: 1025px) {
+  body {
+    background: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg');
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+  }
+  .social-proof {
+    grid-template-areas: "text accomplishments"
+                         "testimonials testimonials"
+                         "footer footer";
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto; 
+  max-width: 1000px;
+  }
+
+  .social-proof__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .social-proof__title {
+    margin: 0 4em 0 0;
+    padding: 90px 0 10px 0;
+  }
+
+  .social-proof__subtitle {
+    padding: 0;
+  }
+
+  .accomplishments {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+  }
+
+  .accomplishment {
+    align-items: center;
+    flex-direction: row;
+    /* flex-shrink: 0; */
+    margin: 0 0 15px 0;
+    min-width: 70%;
+  }
+
+  .accomplishment__two {
+    align-self: center;
+  }
+
+  .accomplishment__three {
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  .accomplishment__icons {
+    margin: 0 2em 0 0;
+  }
+
+  .testimonials {
+    flex-direction: row;
+    gap: 25px;
+  }
+}
